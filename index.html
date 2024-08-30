@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="progress-bar">
+            <div class="step active">Step 1</div>
+            <div class="step">Step 2</div>
+            <div class="step">Step 3</div>
+            <div class="step">Review</div>
+        </div>
+        <br>
+        <br>
+        <form id="multiStepForm">
+            <div class="form-step active" id="step1">
+                <h2>Personal Details</h2><br>
+                <label>
+                    Name:
+                    <input type="text" id="name" name="name">
+                    <span class="error" id="nameError"></span>
+                </label>
+            
+                <label>
+                    Email:
+                    <input type="email" id="email" name="email">
+                    <span class="error" id="emailError"></span>
+                </label>
+                <br><br>
+                <label>
+                    Phone:
+                    <input type="text" id="phone" name="phone">
+                    <span class="error" id="phoneError"></span>
+                </label>
+            </div>
+
+            <div class="form-step" id="step2">
+                <h2>Address</h2><br>
+                <label>
+                    Street:
+                    <input type="text" id="street" name="street">
+                    <span class="error" id="streetError"></span>
+                </label>
+                <label>
+                    City:
+                    <input type="text" id="city" name="city">
+                    <span class="error" id="cityError"></span>
+                </label><br><br>
+                <label>
+                    ZIP Code:
+                    <input type="text" id="zip" name="zip">
+                    <span class="error" id="zipError"></span>
+                </label>
+            </div>
+
+            <div class="form-step" id="step3">
+                <h2>Bank Details</h2><br>
+                <label>
+                    Card Number:
+                    <input type="text" id="cardNumber" name="cardNumber">
+                    <span class="error" id="cardNumberError"></span>
+                </label>
+                <label>
+                    CVC:
+                    <input type="text" id="cvc" name="cvc">
+                    <span class="error" id="cvcError"></span>
+                </label>
+            </div>
+
+            <div class="form-step" id="review">
+                <h2>Review Your Information</h2>
+                <p><strong>Name:</strong> <span id="reviewName"></span></p>
+                <p><strong>Email:</strong> <span id="reviewEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="reviewPhone"></span></p>
+                <p><strong>Street:</strong> <span id="reviewStreet"></span></p>
+                <p><strong>City:</strong> <span id="reviewCity"></span></p>
+                <p><strong>ZIP Code:</strong> <span id="reviewZip"></span></p>
+                <p><strong>Card Number:</strong> <span id="reviewCardNumber"></span></p>
+                <p><strong>CVC:</strong> <span id="reviewCvc"></span></p>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" id="prevBtn" class="btn">Previous</button>
+                <button type="button" id="nextBtn" class="btn">Next</button>
+                <button type="submit" id="submitBtn" class="btn">Submit</button>
+            </div>
+            
+        </form>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
